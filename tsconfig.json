@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": ".src",
+    "paths": {
+      "@/*": ["*"],
+      "@shared/*": ["shared/*"]
+    },
     "target": "ES6",
     "useDefineForClassFields": true,
     "lib": ["ES6", "DOM", "DOM.Iterable"],
