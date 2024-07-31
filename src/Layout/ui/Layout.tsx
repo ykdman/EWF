@@ -12,7 +12,7 @@ function Layout({ children }: Props) {
   return (
     <>
       <Header />
-      <main className="w-full mx-auto my-0">
+      <main className="w-full h-full mx-auto my-0">
         {children ? children : <Outlet />}
       </main>
       <Footer />

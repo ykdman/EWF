@@ -1,25 +1,26 @@
-import { IoBarbellSharp } from "react-icons/io5";
+import { SiAlwaysdata } from "react-icons/si";
 import { useCategory } from "../../../hooks/useCategory";
-import HeaderNavList from "./HeaderNavList";
-import HeaderCredential from "./HeaderCredential";
 
 function Header() {
   const { fetchedCategory } = useCategory();
 
   return (
-    <header className="w-full  flex p-5 justify-between items-center bg-gradient-to-r from-cyan-500 to-blue-600 ">
-      {/* <div id="title">
-        <h1 className="text-7xl">모.운.게</h1>
-      </div> */}
-      <div id="logo">
-        <IoBarbellSharp className="w-24 h-24 hover:text-cyan-50 cursor-pointer" />
+    <header className="w-full h-[80px] flex justify-between  items-center bg-gradient-to-r from-indigo-500  to-emerald-500 ">
+      <div className="px-2">
+        {/* logo */}
+        <SiAlwaysdata className="w-10 h-10" />
       </div>
-      <p className="w-full my-0 mx-auto flex justify-center">
-        <h1 className="text-2xl font-bold">모두의 운동!</h1>
-      </p>
-      <div className="flex justify-between items-center w-[300px] gap-6">
-        <HeaderNavList categories={fetchedCategory} />
-        <HeaderCredential />
+
+      <div>
+        <h1 className="font-bold">Waymaker</h1>
+      </div>
+
+      <div className="px-4">
+        {/* sign */}
+        <div className="flex gap-4">
+          <button>로그인</button>
+          <button>회원가입</button>
+        </div>
       </div>
     </header>
   );
